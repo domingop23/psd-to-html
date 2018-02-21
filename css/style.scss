@@ -1,0 +1,311 @@
+/* -------- RESET -------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{box-sizing:border-box;}
+
+/* -------- LAYOUT -------- */
+
+// Variables
+$a-color: #01def0;
+$p-color: #717171;
+$h-color: #415355;
+
+body{
+    font-family: Helvetica, Arial;
+}
+a{
+    color: $a-color; 
+    text-decoration: none;
+}
+p{
+    color: $p-color;
+    font-size: 14px !important;
+}
+.separator{
+    background: #e2e2e2;
+    width: 1100px;
+    height: 1px;
+    border: 0;
+}
+.small-separator{
+    background: #e2e2e2;
+    height: 1px;
+    width: 300px;
+    margin: 10px 0;
+    border: 0;
+}
+header{
+    background: url(../img/background-header.png) repeat-x #d2d3d5;
+    margin-bottom: 10px;
+
+    .top{
+        height: 93px;
+        margin-bottom: 28px;
+
+        h1{
+            float: left;
+            margin: 25px 0 0 115px;
+
+            img{
+                display: block;
+                height:83px;
+                width: 173px;
+            }
+        }
+        nav{
+            float: right;
+            position: relative;
+            z-index: 99;
+            padding-top: 10px;
+            margin-right: 120px;
+
+            a{
+                float: left;
+                color: #fff;
+                font-size: 15px;
+                padding: 10px;
+                border-radius: 3px;
+                margin: 30px 5px 0; 
+
+                &:hover{
+                    background: $h-color;
+                }
+            }
+        }
+    }
+    .flexslider img{
+        display: block;
+        margin: auto;
+        width: 1100px !important;
+        height: 350px !important;
+    }
+}
+.small-boxes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .small-box{
+        background: #f5f5f5;
+        border-radius: 2px;
+        box-shadow: 0 0 2px #999;
+        width: 350px;
+        margin: 0 10px 5px;
+
+        h3{
+            color: $h-color;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px 0;
+        }
+        p{
+            margin: 20px;
+            font-weight: 200;
+        }
+        .link-box{
+            background: #ffcc00;
+            width: 75px;
+            color: #fff;
+            font-size: 13px;
+            display: block;
+            margin: 20px;
+            padding: 10px;
+
+            &:hover{
+                background: #d5ab02;
+            }
+        }
+    }
+}
+.articles{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    article{
+        margin: 0 40px;
+
+        h2{
+            color: $h-color;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }  
+        p{
+            font-weight: 200;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        a{
+            font-size: 13px;
+        }
+    }
+    .news{
+        width: 300px;
+
+        h4{
+            color: $h-color;
+            margin: 10px 0;
+        }
+        time{
+            font-size: 12px;
+            color: $a-color;
+        }
+    }
+    .us{
+        width: 300px;
+
+        .us-img{
+            margin-bottom: 10px;
+
+            img{
+                width: 270px;
+                height: 150px;
+            }
+        }
+    }
+    .reason{
+        width: 300px;
+        margin-bottom: 14px;
+
+        .num-circle{
+            background-color: #829599;
+            padding: 15px;
+            border-radius: 60px;
+            box-shadow: 0 0 3px rbga(0,0,0,.5);
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            float: left;
+            margin: 10px 10px 0 0;
+        }
+        p{
+            padding-top: 15px;
+        }
+    }   
+}
+.clients{
+    margin: 20px 0;
+
+    img{
+        height: 130px;
+        display: block;
+        margin: auto;
+    }
+}
+aside{
+    background: #d2d3d5;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    div{
+        margin: 0 70px;
+
+        h4{
+            margin-bottom: 20px;
+            color: $h-color;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        ul{
+            list-style-image: url(../img/point-list.png); 
+            margin-left: 20px;
+
+            li{
+                margin: 13px 0;
+
+                a{
+                    color: #829599;
+                    text-decoration: underline;
+                    font-size: 14px;
+
+                    &:hover{
+                        text-decoration: none;
+                        color: #617073;
+                    }
+                }
+            }
+            li.facebook{
+                list-style-image: url(../img/facebook.png);
+                margin: 6px 15px;
+            }
+            li.delicious{
+                list-style-image: url(../img/delicious.png);
+                margin: 6px 15px;
+            }
+            li.google{
+                list-style-image: url(../img/google-plus.png);
+                margin: 6px 15px;
+            }
+            li.skype{
+                list-style-image: url(../img/skype.png);
+                margin: 6px 15px;
+            }
+            li.youtube{
+                list-style-image: url(../img/youtube.png);
+                margin: 6px 15px;
+            }
+        }
+    }
+}
+footer{
+    background: url(../img/background-header.png) repeat-x transparent;
+
+    p{
+        color: #fff;
+        text-align: center;
+        padding: 30px 0;
+    }
+}
